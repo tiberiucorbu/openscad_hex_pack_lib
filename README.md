@@ -38,10 +38,10 @@ These parameters are common to all modules
 Describes how to orient the hexagons, with the corner peak at the top or on the side
 
 FLAT
-![FLAT ORIENTATION ](doc/hexpack.flat-orientation.png)
+![FLAT ORIENTATION ](hexpack/doc/hexpack.flat-orientation.png)
 
 POINTY
-![FLAT ORIENTATION ](doc/hexpack.pointy-orientation.png)
+![FLAT ORIENTATION ](hexpack/doc/hexpack.pointy-orientation.png)
 
 `origin` a [q, r, s] vector/point from where the grid starts [0, 0, 0] 
 
@@ -69,9 +69,9 @@ hexpack_hexagon_grid(N = 1, diameter = part_diam + spacing, orientation = FLAT){
 `N`  Number of rings any positive integer number bigger than 0
 
 N=2
-![Hexagonal Grid Flat](doc/hexpack.hexagon-n2.png)
+![Hexagonal Grid Flat](hexpack/doc/hexpack.hexagon-n2.png)
 N=5
-![Hexagon Grid](doc/hexpack.hexagon-n5.png)
+![Hexagon Grid](hexpack/doc/hexpack.hexagon-n5.png)
 
 ### Parallelogram Grid
 The most basic shape that renders a leaf like or a diamond grid:
@@ -107,9 +107,9 @@ hexpack_parallelogram_gird(axis_shift=1, width = -2, length = 2, diameter = part
 Apart from general parameters is needed the `width` and `length` that can be positive or negative integers. 
 
 FLAT aspect
-![Parallelogram Flat](hexpack.paralelogram-flat.png)
+![Parallelogram Flat](hexpack/doc/hexpack.paralelogram-flat.png)
 POINTY aspect
-![Parallelogram Pointy](doc/hexpack.paralelogram-pointy.png)
+![Parallelogram Pointy](hexpack/doc/hexpack.paralelogram-pointy.png)
 
 ### Triangle Grid
 
@@ -124,10 +124,10 @@ hexpack_triangle_grid(side = 3, diameter = part_diam + spacing, orientation = FL
 `Side` how many cells should the triangle grid have, positive integer bigger than 0
 
 side = 1
-![Hexpack Triangle One  with 1 cells ](doc/hexpack.triangle-1.png)
+![Hexpack Triangle One  with 1 cells ](hexpack/doc/hexpack.triangle-1.png)
 
 side = 5
-![Hexpack Triangle grid with 5 cells](hexpack.triangle-5.png)
+![Hexpack Triangle grid with 5 cells](hexpack/doc/hexpack.triangle-5.png)
 
 as for the other modules this module supports `axel_shift` and `orientation` parameters 
 
@@ -141,7 +141,7 @@ hexpack_rectangle_grid(left = -2, right = 2, top = -2, bottom = 2, diameter = pa
     };
 ```
 
-![hexpack rectagular grid](doc/hexpack.rectangle.png)
+![hexpack rectagular grid](hexpack/doc/hexpack.rectangle.png)
 
 `left`, `right`, `top`, `bottom` define the infill of the grid from where to start and where to end. 
 
@@ -154,9 +154,9 @@ Rotating the  gird works with the `axis_shift`
 `cube_distance(vectorA, vectorB)` computes the distance from vectorA to vectorB unscaled, to get the actual measure in regards to the diameter get the scaling factor from diameter using `diameter_to_scale_factor`
  function than multiply the result with the cube_distance result  
 
-`axial_mat_to_cube(vector)` computes an axial vector to a cube one, eg [-1, 2] => [-1, 2, 1]
+`axial_mat_to_cube(vector)` computes an axial vector to a cube one, eg. [-1, 2] => [-1, 2, 1]
 
-`assert_cube_coordinate(vector)`  checks with assertions that the cube coordinate fulfils the constraint `q - r - s = 0`
+`assert_cube_coordinate(vector)`  checks with assertions that the cube coordinate fulfills the constraint `q - r - s = 0`
 
 `cube_neighbor(vector, direction)` iterates  the vector with +1 onto the grid in the specified direction, there are 6 directions in total, direction param is 0 based so supported values are from 0 to 5.  
 
