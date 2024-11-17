@@ -38,13 +38,10 @@ These parameters are common to all modules
 Describes how to orient the hexagons, with the corner peak at the top or on the side
 
 FLAT
-![[hexpack.flat-orientation.png]]
+![FLAT ORIENTATION ](doc/hexpack.flat-orientation.png)
 
 POINTY
-![[hexpack.pointy-orientation.png]]
-
-
-
+![FLAT ORIENTATION ](doc/hexpack.pointy-orientation.png)
 
 `origin` a [q, r, s] vector/point from where the grid starts [0, 0, 0] 
 
@@ -64,7 +61,7 @@ duplicates its first child in a hexagonal grid shape
 
 eg: 
 ```
-hexagon_translations(N = 1, diameter = part_diam + spacing, orientation = FLAT){
+hexpack_hexagon_grid(N = 1, diameter = part_diam + spacing, orientation = FLAT){
     cylinder(d = part_diam, h = 2, center = false, $fn=6);
 }
 ```
@@ -72,9 +69,9 @@ hexagon_translations(N = 1, diameter = part_diam + spacing, orientation = FLAT){
 `N`  Number of rings any positive integer number bigger than 0
 
 N=2
-![[hexpack.hexagon-n2.png]]
+![Hexagonal Grid Flat](doc/hexpack.hexagon-n2.png)
 N=5
-![[hexpack.hexagon-n5.png]]
+![Hexagon Grid](doc/hexpack.hexagon-n5.png)
 
 ### Parallelogram Grid
 The most basic shape that renders a leaf like or a diamond grid:
@@ -110,9 +107,9 @@ hexpack_parallelogram_gird(axis_shift=1, width = -2, length = 2, diameter = part
 Apart from general parameters is needed the `width` and `length` that can be positive or negative integers. 
 
 FLAT aspect
-![[hexpack.paralelogram-flat.png]]
+![Parallelogram Flat](hexpack.paralelogram-flat.png)
 POINTY aspect
-![[hexpack.paralelogram-pointy.png]]
+![Parallelogram Pointy](doc/hexpack.paralelogram-pointy.png)
 
 ### Triangle Grid
 
@@ -127,10 +124,10 @@ hexpack_triangle_grid(side = 3, diameter = part_diam + spacing, orientation = FL
 `Side` how many cells should the triangle grid have, positive integer bigger than 0
 
 side = 1
-![[hexpack.triable-1.png]]
+![Triangle One ](hexpack.triangle-1.png)
 
 side = 5
-![[hexpack.triable-5.png]]
+![[hexpack.triangle-5.png]]
 
 as for the other modules this module supports `axel_shift` and `orientation` parameters 
 
@@ -144,7 +141,7 @@ hexpack_rectangle_grid(left = -2, right = 2, top = -2, bottom = 2, diameter = pa
     };
 ```
 
-![[hexpack.rectangle.png]]
+![hexpack ](doc/hexpack.rectangle.png)
 
 `left`, `right`, `top`, `bottom` define the infill of the grid from where to start and where to end. 
 
