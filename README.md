@@ -113,7 +113,7 @@ POINTY aspect
 
 ### Triangle Grid
 
-renders 
+Duplicates its first child in a triangle grid shape 
 
 ```
 hexpack_triangle_grid(side = 3, diameter = part_diam + spacing, orientation = FLAT, axis_shift=2){
@@ -124,10 +124,10 @@ hexpack_triangle_grid(side = 3, diameter = part_diam + spacing, orientation = FL
 `Side` how many cells should the triangle grid have, positive integer bigger than 0
 
 side = 1
-![Triangle One ](hexpack.triangle-1.png)
+![Hexpack Triangle One  with 1 cells ](doc/hexpack.triangle-1.png)
 
 side = 5
-![[hexpack.triangle-5.png]]
+![Hexpack Triangle grid with 5 cells](hexpack.triangle-5.png)
 
 as for the other modules this module supports `axel_shift` and `orientation` parameters 
 
@@ -141,7 +141,7 @@ hexpack_rectangle_grid(left = -2, right = 2, top = -2, bottom = 2, diameter = pa
     };
 ```
 
-![hexpack ](doc/hexpack.rectangle.png)
+![hexpack rectagular grid](doc/hexpack.rectangle.png)
 
 `left`, `right`, `top`, `bottom` define the infill of the grid from where to start and where to end. 
 
