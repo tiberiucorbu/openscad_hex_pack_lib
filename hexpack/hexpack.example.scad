@@ -1,5 +1,5 @@
-include <hexpack/hexpack-constants.scad>;
-use <hexpack/hexpack.scad>;
+include <hexpack-constants.scad>;
+use <hexpack.scad>;
 
 $fn = 6;
 part_diam = 10;
